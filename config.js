@@ -7,7 +7,7 @@
 const CONFIG = {
 
   /* (1) Paste your Google Apps Script Web App URL here (see SETUP-GUIDE.md, Step 4). */
-  SCRIPT_URL: "PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE",
+  SCRIPT_URL: "https://script.google.com/macros/s/AKfycbyikTmeqXYOtgMau4EuxVHs3pEi8KSIQctrBeF7r9QED_L-DDoOdLzIvAD7psRrQfAM/exec",
 
   /* (2) Your branding. */
   COMPANY_NAME: "Casino Jobs",

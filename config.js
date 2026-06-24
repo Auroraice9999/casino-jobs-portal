@@ -15,8 +15,8 @@ const CONFIG = {
 
   /* (3) Your Telegram for candidates to contact you.
          TELEGRAM_ID is what they see; TELEGRAM_LINK is the clickable link. */
-  TELEGRAM_ID:   "@YourHR_Username",
-  TELEGRAM_LINK: "https://t.me/YourHR_Username",
+  TELEGRAM_ID:   "@casinojobsofficial",
+  TELEGRAM_LINK: "https://t.me/casinojobsofficial",
 
   /* (4) Work-experience dropdown options. */
   EXPERIENCE_OPTIONS: ["Fresher", "0-1 year", "1-3 years", "3+ years"],

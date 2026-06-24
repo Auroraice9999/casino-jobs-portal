@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apply — Job</title>
+  <script src="config.js"></script>
+  <style>
+    :root {
+      --brand: #15803d; --brand-dark: #166534;
+      --text: #1f2937; --muted: #6b7280; --bg: #f8fafc;
+      --card: #ffffff; --border: #e5e7eb; --ok: #16a34a; --err: #dc2626;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+           color: var(--text); background: var(--bg); line-height: 1.55; }
+
+    header { background: var(--card); border-bottom: 1px solid var(--border);
+             padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
+    .logo-img { height: 40px; width: 40px; }
+    header h1 { font-size: 18px; font-weight: 700; }
+    nav a { color: var(--brand); font-weight: 600; text-decoration: none; font-size: 14px; }
+    nav a:hover { text-decoration: underline; }
+
+    .wrap { max-width: 680px; margin: 0 auto; padding: 24px 20px 80px; }
+    .back { display: inline-block; margin: 8px 0 16px; color: var(--brand); text-decoration: none; font-size: 14px; font-weight: 600; }
+
+    .job-head h2 { font-size: 26px; margin-bottom: 8px; }
+    .meta { font-size: 13px; color: var(--muted); margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 6px; }
+    .pill { background: #ecfdf5; color: var(--brand-dark); border-radius: 999px; padding: 3px 10px; font-size: 12px; }
+
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 24px; margin-bottom: 20px; }
+    .card h3 { font-size: 18px; margin-bottom: 12px; }
+    .card ul { padding-left: 20px; } .card li { margin-bottom: 6px; font-size: 15px; }
+    .card p.lead { font-size: 15px; color: var(--text); }
+
+    .field { margin-bottom: 18px; }
+    label { display: block; font-weight: 600; font-size: 14px; margin-bottom: 6px; }
+    label .req { color: var(--err); }
+    input, select, textarea { width: 100%; padding: 11px 12px; font-size: 15px;
+      border: 1px solid var(--border); border-radius: 8px; font-family: inherit; background: #fff; }
+    input:focus, select:focus, textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px rgba(21,128,61,.12); }
+    textarea { resize: vertical; min-height: 90px; }
+    .hint { font-size: 12px; color: var(--muted); margin-top: 5px; }
+    .file-name { font-size: 13px; margin-top: 6px; color: var(--ok); font-weight: 600; }
+    .field-error { color: var(--err); font-size: 13px; margin-top: 5px; display: none; }
+    .role-fixed { background: #f1f5f9; color: var(--text); font-weight: 600; }
+
+    .btn { background: var(--brand); color: #fff; border: none; padding: 14px 28px; font-size: 16px;
+           font-weight: 600; border-radius: 10px; cursor: pointer; transition: background .15s ease; }
+    .btn:hover { background: var(--brand-dark); }
+    .btn:disabled { opacity: .6; cursor: not-allowed; }
+    .btn-full { width: 100%; }
+
+    .banner { padding: 12px 14px; border-radius: 8px; margin-bottom: 18px; font-size: 14px; display: none; }
+    .banner.err { display: block; background: #fee2e2; color: var(--err); }
+
+    .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.5);
+               align-items: center; justify-content: center; padding: 20px; z-index: 50; }
+    .overlay.show { display: flex; }
+    .modal { background: #fff; border-radius: 16px; padding: 36px 28px; max-width: 440px; width: 100%; text-align: center; }
+    .check { width: 64px; height: 64px; border-radius: 50%; background: #dcfce7; color: var(--ok);
+             display: flex; align-items: center; justify-content: center; font-size: 34px; margin: 0 auto 16px; }
+    .modal h3 { font-size: 22px; margin-bottom: 8px; }
+    .modal p { color: var(--muted); margin-bottom: 14px; }
+    .tg-box { background: #ecfdf5; border-radius: 10px; padding: 14px; margin-bottom: 20px; font-size: 14px; }
+    .tg-box a { color: var(--brand-dark); font-weight: 700; text-decoration: none; }
+
+    footer { text-align: center; padding: 24px; color: var(--muted); font-size: 13px; }
+
+    @media (max-width: 600px) { .card { padding: 18px; } .job-head h2 { font-size: 22px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html">
+      <img src="logo.svg" alt="Casino Jobs logo" class="logo-img" />
+      <h1 id="brandName"></h1>
+    </a>
+    <nav><a href="about.html">About Us</a></nav>
+  </header>
+
+  <div class="wrap">
+    <a class="back" href="index.html">&larr; Back to all jobs</a>
+
+    <div id="content"><!-- filled by JavaScript --></div>
+  </div>
+
+  <footer>&copy; <span id="year"></span> <span id="footerName"></span>. All rights reserved.</footer>
+
+  <!-- Success popup -->
+  <div class="overlay" id="overlay">
+    <div class="modal">
+      <div class="check">&#10003;</div>
+      <h3>Thanks for applying!</h3>
+      <p>Our HR team will contact you soon.</p>
+      <div class="tg-box">
+        Have questions? Reach our HR on Telegram:<br>
+        <a id="tgLinkPopup" target="_blank" rel="noopener"></a>
+      </div>
+      <button class="btn" onclick="window.location.href='index.html'">Back to Jobs</button>
+    </div>
+  </div>
+
+  <script>
+    // Branding
+    document.getElementById('brandName').textContent = CONFIG.COMPANY_NAME;
+    document.getElementById('footerName').textContent = CONFIG.COMPANY_NAME;
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const tgP = document.getElementById('tgLinkPopup');
+    tgP.textContent = CONFIG.TELEGRAM_ID; tgP.href = CONFIG.TELEGRAM_LINK;
+
+    const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+    // Find the selected job from the URL (?role=...)
+    const params = new URLSearchParams(window.location.search);
+    const roleParam = params.get('role') || '';
+    const job = CONFIG.JOBS.find(j => j.title === roleParam) || CONFIG.JOBS[0];
+    document.title = "Apply — " + job.title;
+
+    const expOptions = CONFIG.EXPERIENCE_OPTIONS.map(o => '<option value="' + esc(o) + '">' + esc(o) + '</option>').join('');
+    const respList = (job.responsibilities || []).map(r => '<li>' + esc(r) + '</li>').join('');
+    const reqList  = (job.requirements || []).map(r => '<li>' + esc(r) + '</li>').join('');
+    const setupList = (job.workSetup || []).map(r => '<li>' + esc(r) + '</li>').join('');
+
+    document.getElementById('content').innerHTML = `
+      <div class="job-head">
+        <h2>${esc(job.title)}</h2>
+        <div class="meta">
+          ${job.openings ? '<span class="pill">' + esc(job.openings) + ' opening' + (String(job.openings)==='1'?'':'s') + '</span>' : ''}
+          ${job.type ? '<span class="pill">' + esc(job.type) + '</span>' : ''}
+          ${job.location ? '<span class="pill">' + esc(job.location) + '</span>' : ''}
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>About this role</h3>
+        <p class="lead">${esc(job.summary || '')}</p>
+        ${respList ? '<h3 style="margin-top:16px">What you&rsquo;ll do</h3><ul>' + respList + '</ul>' : ''}
+        ${reqList ? '<h3 style="margin-top:16px">What we&rsquo;re looking for</h3><ul>' + reqList + '</ul>' : ''}
+        ${setupList ? '<h3 style="margin-top:16px">Work setup</h3><ul>' + setupList + '</ul>' : ''}
+      </div>
+
+      <div class="card">
+        <h3>Apply for this role</h3>
+        <p class="hint" style="margin-bottom:18px">Fields marked <span style="color:#dc2626">*</span> are required.</p>
+        <div class="banner" id="errorBanner"></div>
+
+        <form id="applyForm" novalidate>
+          <div class="field">
+            <label>Applying for</label>
+            <input type="text" class="role-fixed" id="roleFixed" value="${esc(job.title)}" readonly />
+          </div>
+          <div class="field">
+            <label>Full Name <span class="req">*</span></label>
+            <input type="text" id="fullName" required />
+            <div class="field-error" data-for="fullName">Please enter your full name.</div>
+          </div>
+          <div class="field">
+            <label>Contact Number <span class="req">*</span></label>
+            <input type="tel" id="contact" required placeholder="e.g. +1 555 123 4567" />
+            <div class="field-error" data-for="contact">Please enter a valid contact number.</div>
+          </div>
+          <div class="field">
+            <label>Telegram ID <span class="req">*</span></label>
+            <input type="text" id="telegram" required placeholder="e.g. @yourusername" />
+            <div class="hint">Your Telegram username so our HR can reach you.</div>
+            <div class="field-error" data-for="telegram">Please enter your Telegram ID.</div>
+          </div>
+          <div class="field">
+            <label>Email Address <span class="req">*</span></label>
+            <input type="email" id="email" required placeholder="you@example.com" />
+            <div class="field-error" data-for="email">Please enter a valid email address.</div>
+          </div>
+          <div class="field">
+            <label>Age <span class="req">*</span></label>
+            <input type="number" id="age" required min="16" max="80" />
+            <div class="field-error" data-for="age">Please enter your age (16–80).</div>
+          </div>
+          <div class="field">
+            <label>Location (City) <span class="req">*</span></label>
+            <input type="text" id="location" required />
+            <div class="field-error" data-for="location">Please enter your location.</div>
+          </div>
+          <div class="field">
+            <label>Work Experience <span class="req">*</span></label>
+            <select id="experience" required><option value="">— Select —</option>${expOptions}</select>
+            <div class="field-error" data-for="experience">Please select your experience.</div>
+          </div>
+          <div class="field">
+            <label>Expected Salary <span class="req">*</span></label>
+            <input type="text" id="salary" required placeholder="e.g. 30,000 / month" />
+            <div class="field-error" data-for="salary">Please enter your expected salary.</div>
+          </div>
+          <div class="field">
+            <label>Short Self-Introduction <span class="req">*</span></label>
+            <textarea id="intro" required placeholder="Tell us a little about yourself..."></textarea>
+            <div class="field-error" data-for="intro">Please write a short introduction.</div>
+          </div>
+          <div class="field">
+            <label>Upload CV / Resume (PDF or Word, max 5MB) <span class="req">*</span></label>
+            <input type="file" id="resume" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required />
+            <div class="file-name" id="fileName"></div>
+            <div class="field-error" data-for="resume">Please upload a PDF or Word file under 5MB.</div>
+          </div>
+          <button type="submit" class="btn btn-full" id="submitBtn">Submit Application</button>
+        </form>
+      </div>
+    `;
+
+    // ---- Form logic ----
+    const MAX_BYTES = 5 * 1024 * 1024;
+    const ALLOWED = ['application/pdf','application/msword','application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+    const form = document.getElementById('applyForm');
+    const fileInput = document.getElementById('resume');
+    const submitBtn = document.getElementById('submitBtn');
+    const errorBanner = document.getElementById('errorBanner');
+
+    fileInput.addEventListener('change', () => {
+      const f = fileInput.files[0];
+      document.getElementById('fileName').textContent = f ? (f.name + " (" + (f.size/1024/1024).toFixed(2) + " MB)") : "";
+    });
+
+    function showError(id, show) {
+      const el = document.querySelector('.field-error[data-for="' + id + '"]');
+      if (el) el.style.display = show ? 'block' : 'none';
+    }
+    function val(id){ return document.getElementById(id).value.trim(); }
+
+    function validate() {
+      let ok = true;
+      const setReq = (id, valid) => { showError(id, !valid); if (!valid) ok = false; };
+      setReq('fullName', val('fullName').length > 1);
+      setReq('contact', val('contact').replace(/\D/g,'').length >= 7);
+      setReq('telegram', val('telegram').length > 1);
+      setReq('email', /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val('email')));
+      const age = parseInt(val('age'), 10);
+      setReq('age', age >= 16 && age <= 80);
+      setReq('location', val('location').length > 1);
+      setReq('experience', val('experience') !== '');
+      setReq('salary', val('salary').length > 0);
+      setReq('intro', val('intro').length > 0);
+      const f = fileInput.files[0];
+      setReq('resume', f && f.size <= MAX_BYTES && (ALLOWED.includes(f.type) || /\.(pdf|docx?)$/i.test(f.name)));
+      return ok;
+    }
+
+    function readFileAsBase64(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result.split(',')[1]);
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      errorBanner.classList.remove('err'); errorBanner.textContent = '';
+      if (!validate()) { errorBanner.textContent = 'Please fix the highlighted fields above.'; errorBanner.classList.add('err'); return; }
+      if (CONFIG.SCRIPT_URL.startsWith('PASTE_')) {
+        errorBanner.textContent = 'Setup not finished: add the Google Script link in config.js (see SETUP-GUIDE.md).';
+        errorBanner.classList.add('err'); return;
+      }
+      submitBtn.disabled = true; submitBtn.textContent = 'Submitting... please wait';
+      try {
+        const file = fileInput.files[0];
+        const fileData = await readFileAsBase64(file);
+        const payload = {
+          fullName: val('fullName'), contact: val('contact'), telegram: val('telegram'),
+          email: val('email'), age: val('age'), location: val('location'),
+          experience: val('experience'), roles: [job.title], salary: val('salary'),
+          intro: val('intro'), fileName: file.name,
+          fileType: file.type || 'application/octet-stream', fileData: fileData
+        };
+        const res = await fetch(CONFIG.SCRIPT_URL, { method: 'POST', body: JSON.stringify(payload) });
+        const out = await res.json();
+        if (out.result === 'success') {
+          form.reset();
+          document.getElementById('fileName').textContent = '';
+          document.getElementById('overlay').classList.add('show');
+        } else { throw new Error(out.message || 'Unknown server error'); }
+      } catch (err) {
+        errorBanner.textContent = 'Something went wrong while submitting. Please check your internet and try again. (' + err.message + ')';
+        errorBanner.classList.add('err');
+      } finally {
+        submitBtn.disabled = false; submitBtn.textContent = 'Submit Application';
+      }
+    });
+  </script>
+</body>
+</html>

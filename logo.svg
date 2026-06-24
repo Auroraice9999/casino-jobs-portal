@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-label="Casino Jobs logo">
+  <rect width="48" height="48" rx="11" fill="#15803d"/>
+  <!-- poker chip ring -->
+  <circle cx="24" cy="24" r="15" fill="none" stroke="#ffffff" stroke-width="2.2" opacity="0.55"/>
+  <g fill="#ffffff" opacity="0.55">
+    <rect x="22.6" y="6.4" width="2.8" height="5.6" rx="1.4"/>
+    <rect x="22.6" y="6.4" width="2.8" height="5.6" rx="1.4" transform="rotate(60 24 24)"/>
+    <rect x="22.6" y="6.4" width="2.8" height="5.6" rx="1.4" transform="rotate(120 24 24)"/>
+    <rect x="22.6" y="6.4" width="2.8" height="5.6" rx="1.4" transform="rotate(180 24 24)"/>
+    <rect x="22.6" y="6.4" width="2.8" height="5.6" rx="1.4" transform="rotate(240 24 24)"/>
+    <rect x="22.6" y="6.4" width="2.8" height="5.6" rx="1.4" transform="rotate(300 24 24)"/>
+  </g>
+  <!-- spade -->
+  <path d="M24 12c0 0-8.5 7.4-8.5 13.2 0 3 2.4 5.2 5.2 5.2 1.2 0 2.3-.5 2.9-1.3-.4 2.6-1.7 4.4-3.4 5.1v1.1h7.6v-1.1c-1.7-.7-3-2.5-3.4-5.1.6.8 1.7 1.3 2.9 1.3 2.8 0 5.2-2.2 5.2-5.2C32.5 19.4 24 12 24 12z" fill="#ffffff"/>
+</svg>

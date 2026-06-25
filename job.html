@@ -119,7 +119,6 @@
     const job = CONFIG.JOBS.find(j => j.title === roleParam) || CONFIG.JOBS[0];
     document.title = "Apply — " + job.title;
 
-    const expOptions = CONFIG.EXPERIENCE_OPTIONS.map(o => '<option value="' + esc(o) + '">' + esc(o) + '</option>').join('');
     const respList = (job.responsibilities || []).map(r => '<li>' + esc(r) + '</li>').join('');
     const reqList  = (job.requirements || []).map(r => '<li>' + esc(r) + '</li>').join('');
     const setupList = (job.workSetup || []).map(r => '<li>' + esc(r) + '</li>').join('');
@@ -185,8 +184,8 @@
           </div>
           <div class="field">
             <label>Work Experience <span class="req">*</span></label>
-            <select id="experience" required><option value="">— Select —</option>${expOptions}</select>
-            <div class="field-error" data-for="experience">Please select your experience.</div>
+            <input type="text" id="experience" required placeholder="e.g. 2 years in customer support" />
+            <div class="field-error" data-for="experience">Please enter your experience.</div>
           </div>
           <div class="field">
             <label>Expected Salary <span class="req">*</span></label>

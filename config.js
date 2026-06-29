@@ -242,6 +242,36 @@ const CONFIG = {
         "100% remote / work from home.",
         "Shift-based leadership — iGaming runs 24/7."
       ]
+    },
+    {
+      title: "Esports Category Manager",
+      location: "100% Remote",
+      type: "Full-time",
+      openings: "1",
+      summary: "Live for CS2, Dota 2 and LoL? Own our esports category end-to-end — markets, settlement and growth across every major tournament.",
+      responsibilities: [
+        "Own the esports category across CS2, Dota 2, LoL, Valorant & more.",
+        "Decide which matches, tournaments & markets go live, when they open and how they're settled.",
+        "Set up markets — match winner, map winner, series score & in-game props.",
+        "Track the global esports schedule — majors, leagues, qualifiers & regional events.",
+        "Ensure fast, accurate settlement and handle disputes.",
+        "Grow the category — engagement, volume & new market types.",
+        "Monitor live matches and react in real time."
+      ],
+      requirements: [
+        "Deep knowledge of esports titles — CS2, Dota 2, LoL, Valorant (rules, formats & meta).",
+        "A genuine fan who watches matches and follows teams, players & tournaments closely.",
+        "Strong grasp of competitive formats — BO1/BO3/BO5, group stages, brackets & seeding.",
+        "Awareness of the global esports calendar and major organisers (Valve, Riot, ESL, BLAST & more).",
+        "Sharp judgement on market design, suspension timing & event resolution.",
+        "Comfortable with data and calm under live-event pressure.",
+        "Self-driven and able to work independently."
+      ],
+      workSetup: [
+        "100% remote / work from home.",
+        "Competitive salary — get paid to know esports inside out.",
+        "Esports runs on live events — flexibility around majors and key tournaments expected."
+      ]
     }
     // , {  <-- copy this block to add a new job
     //   title: "New Role Name",

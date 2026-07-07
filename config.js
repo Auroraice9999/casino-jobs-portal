@@ -85,7 +85,7 @@ const CONFIG = {
       ]
     },
     {
-      title: "Digital Marketing Executive — iGaming & Web3",
+      title: "Digital Marketing Executive — iGaming",
       location: "100% Remote",
       type: "Full-time",
       openings: "Multiple",

@@ -89,26 +89,26 @@ const CONFIG = {
       location: "100% Remote",
       type: "Full-time",
       openings: "Multiple",
-      summary: "Drive paid and influencer growth across our iGaming and crypto brands — run Meta ads in restricted verticals and work fluently with KOLs.",
+      summary: "Own user acquisition and channel ROI across Meta, Google and TikTok for our iGaming brands — data-driven, creative-led performance marketing.",
       responsibilities: [
-        "Plan and manage Meta ad campaigns (Facebook & Instagram) for iGaming and crypto products with compliant strategies.",
-        "Identify, negotiate and manage KOL & influencer partnerships across YouTube, Telegram, X and Instagram.",
-        "Build an influencer roster across sports, cricket, fantasy and crypto audiences.",
-        "Track CPA, ROAS, CTR and retention — and optimise weekly.",
-        "Brief creative teams on ad creatives, UGC and influencer guidelines.",
-        "Stay ahead of platform policy changes affecting iGaming & crypto advertising."
+        "Channel management & ROI: drive marketing and user acquisition through channels like Meta and Google, taking full accountability for channel ROI.",
+        "Campaign execution & strategy: own the entire ad operations lifecycle — account setup, audience targeting, bidding strategies, data analysis and conversion attribution.",
+        "Creative strategy: independently conceptualize creative directions and communicate them effectively to design teams.",
+        "Cross-functional collaboration: work closely with ad designers to develop creative asset strategies rooted in data analysis and user personas.",
+        "Market insight: stay ahead of competitor moves and industry trends to rapidly iterate on deployment strategies and explore efficient acquisition methods."
       ],
       requirements: [
-        "2-4 years in performance or influencer marketing, with hands-on iGaming or crypto experience.",
-        "Proven Meta Ads Manager experience in restricted categories.",
-        "Strong KOL/influencer network in sports, cricket, fantasy gaming or crypto communities.",
-        "Comfortable with Telegram, crypto X and regional sports audiences.",
-        "Data-driven — you know your numbers and can read a dashboard.",
-        "Bonus: experience with affiliate networks (Income Access, MyAffiliates or similar)."
+        "2+ years in mobile internet ad operations; highly familiar with mainstream acquisition channels (including but not limited to Facebook, Google and TikTok). Proven successful cases preferred.",
+        "Direct experience in the iGaming industry (slots, casino, betting or skill-based card games) is required; familiarity with the Indian market is a strong plus.",
+        "Outstanding creative strategy skills — able to control and maintain the quality and planning of creative concepts.",
+        "Highly sensitive to data, able to map relationships between metrics and keenly detect trends or anomalies.",
+        "Result-oriented, resilient under pressure, and able to thrive in a fast-paced environment.",
+        "Keen insight into target audiences and user behaviour."
       ],
       workSetup: [
         "100% remote / work from home.",
-        "Crypto and iGaming move fast — flexibility around key events expected."
+        "Portfolio required: attach successful ad case studies or performance data results when applying.",
+        "Comfortable with occasional data monitoring outside standard hours (adjusted to the target time zones of your campaigns)."
       ]
     },
     {

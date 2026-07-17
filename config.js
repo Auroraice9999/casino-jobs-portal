@@ -28,32 +28,34 @@ const CONFIG = {
          workSetup) can have as many or as few lines as you like. */
   JOBS: [
     {
-      title: "Senior Product Manager / Product Owner — Sportsbook",
+      title: "Cricket Sportsbook Manager",
       location: "Dubai",
       type: "Full-time",
       openings: "1",
-      summary: "Own and grow a key product area within our sportsbook — set the roadmap, make the calls, and ship features that move the numbers.",
+      summary: "Own our cricket exchange and sportsbook end-to-end — markets, pricing and product decisions across every major cricket tournament.",
       responsibilities: [
-        "Own the product roadmap — decide what gets built, in what order, and why.",
-        "Track competitors and turn market insight into product decisions.",
+        "Own the cricket product across the exchange and sportsbook — markets, pricing, roadmap and results.",
+        "Decide which cricket markets go live (match odds, session/fancy markets, player props, series & tournament bets), when they open and how they settle.",
+        "Manage the cricket exchange — back/lay liquidity, matched bets, in-play trading and risk.",
+        "Track the global cricket calendar — IPL, T20 leagues, internationals, ICC events & domestic tournaments.",
         "Work closely with Trading, Commercial, UX and Development teams.",
-        "Take features from idea to launch — write requirements, manage the backlog, and stay close to the build.",
-        "Define success metrics for every release and be accountable for results."
+        "Take features from idea to launch — write requirements, manage the backlog and stay close to the build.",
+        "Monitor live matches and react in real time to events, odds and market movements."
       ],
       requirements: [
-        "Proven experience on a sportsbook product — you understand bet builders, pricing and market structure, and can talk confidently with trading teams from day one.",
-        "5+ years in product management, ideally as a Senior PM or Product Owner.",
+        "Deep cricket knowledge — formats, rules, playing conditions and how they shape betting markets.",
+        "Proven experience on a cricket exchange and/or sportsbook product — match odds, session/fancy markets, bet builders, pricing and market structure.",
+        "Strong grasp of exchange mechanics — back/lay, liquidity, matched bets and in-play trading.",
+        "5+ years in product or trading, ideally as a Senior PM, Product Owner or trading/product lead.",
         "Betting & gaming industry experience is a must — this is a specialised domain.",
-        "A track record of shipping features with clear commercial impact.",
-        "Strong communication and stakeholder management skills.",
         "Data-driven mindset — you use numbers and product instinct together.",
-        "Nice to have: experience across multiple sports.",
+        "Strong communication and stakeholder management skills.",
         "Nice to have: familiarity with A/B testing and experimentation.",
         "Nice to have: experience working in remote or distributed teams."
       ],
       workSetup: [
         "Based in Dubai — full-time, part of a growing international team.",
-        "Real ownership and fast decisions — shape a sportsbook product used by thousands of players."
+        "Cricket runs on live events — expect real-time monitoring around key matches and tournaments."
       ]
     },
     {

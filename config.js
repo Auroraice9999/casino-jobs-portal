@@ -28,7 +28,7 @@ const CONFIG = {
          workSetup) can have as many or as few lines as you like. */
   JOBS: [
     {
-      title: "Cricket Sportsbook Manager",
+      title: "Cricket Sportsbook Senior Product Manager / Product Owner",
       location: "Dubai",
       type: "Full-time",
       openings: "1",

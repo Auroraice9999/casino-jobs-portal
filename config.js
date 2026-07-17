@@ -28,6 +28,35 @@ const CONFIG = {
          workSetup) can have as many or as few lines as you like. */
   JOBS: [
     {
+      title: "Senior Product Manager / Product Owner — Sportsbook",
+      location: "Dubai",
+      type: "Full-time",
+      openings: "1",
+      summary: "Own and grow a key product area within our sportsbook — set the roadmap, make the calls, and ship features that move the numbers.",
+      responsibilities: [
+        "Own the product roadmap — decide what gets built, in what order, and why.",
+        "Track competitors and turn market insight into product decisions.",
+        "Work closely with Trading, Commercial, UX and Development teams.",
+        "Take features from idea to launch — write requirements, manage the backlog, and stay close to the build.",
+        "Define success metrics for every release and be accountable for results."
+      ],
+      requirements: [
+        "Proven experience on a sportsbook product — you understand bet builders, pricing and market structure, and can talk confidently with trading teams from day one.",
+        "5+ years in product management, ideally as a Senior PM or Product Owner.",
+        "Betting & gaming industry experience is a must — this is a specialised domain.",
+        "A track record of shipping features with clear commercial impact.",
+        "Strong communication and stakeholder management skills.",
+        "Data-driven mindset — you use numbers and product instinct together.",
+        "Nice to have: experience across multiple sports.",
+        "Nice to have: familiarity with A/B testing and experimentation.",
+        "Nice to have: experience working in remote or distributed teams."
+      ],
+      workSetup: [
+        "Based in Dubai — full-time, part of a growing international team.",
+        "Real ownership and fast decisions — shape a sportsbook product used by thousands of players."
+      ]
+    },
+    {
       title: "Esports Category Manager",
       location: "100% Remote",
       type: "Full-time",

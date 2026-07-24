@@ -28,6 +28,33 @@ const CONFIG = {
          workSetup) can have as many or as few lines as you like. */
   JOBS: [
     {
+      title: "Finance Manager — iGaming / Payments",
+      location: "Dubai / Remote",
+      type: "Full-time",
+      openings: "1",
+      summary: "Own our general ledger and reconciliation flows end-to-end — dissect complex payment flows and drive financial control in a high-volume iGaming / payments environment.",
+      responsibilities: [
+        "End-to-end accounting: manage day-to-day operations — bookkeeping, journal entries, AP/AR and GL maintenance.",
+        "Own end-to-end reconciliations across high-volume payment flows, accounts and settlement files.",
+        "Investigate and resolve financial discrepancies — dig into the data, escalate effectively and drive issues to closure.",
+        "Prepare accurate management accounts and deliver clear financial reporting to leadership.",
+        "Continuously improve reconciliation processes, internal controls and documentation.",
+        "Work directly with banking, PSP and operational partners to resolve queries seamlessly."
+      ],
+      requirements: [
+        "Solid accounting foundation — hands-on experience owning the full accounting cycle end-to-end.",
+        "High-volume transaction background — deep reconciliation experience in Payments, iGaming, Fintech or E-commerce.",
+        "Data-driven and analytical — advanced proficiency with large datasets, financial systems and reconciliation tools.",
+        "Ownership mindset — proactive, self-sufficient and comfortable in a fast-paced, high-growth environment.",
+        "Based in Dubai or able to work remotely across compatible time zones."
+      ],
+      workSetup: [
+        "Dubai-based, or remote across compatible time zones.",
+        "High autonomy and direct impact on high-growth operations.",
+        "Collaborative, agile, cross-functional international teams; competitive compensation."
+      ]
+    },
+    {
       title: "Cricket Sportsbook Senior Product Manager / Product Owner",
       location: "Dubai",
       type: "Full-time",
